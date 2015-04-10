@@ -1,0 +1,9 @@
+<h1>Welcome to the Blogger Application</h1>
+<% @posts.reverse.each do |p| %>
+<h2><%= link_to p.title , p %></h2>
+Created At : <i><%= p.created_at %></i>
+<p><%= p.content %></p>
+<hr>
+<% end %>
+
+<%= link_to "New", new_post_path %>
