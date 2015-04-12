@@ -26,15 +26,11 @@ before_action :find_post, only: [:show,:edit,:update,:destroy]
   def update
   if @post.update(post_params)
   redirect_to @post
-  else
-  redirect_to root_path
   end
   end
 
   def destroy
-  if @post.destroy
-  redirect_to root_path
-  end
+  @post.destroy
   end
   
   private
